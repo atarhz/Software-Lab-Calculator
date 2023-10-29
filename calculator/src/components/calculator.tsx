@@ -1,6 +1,9 @@
 import { useContext, useState } from 'react'
 import React from 'react';
 import { useEffect } from 'react'
+import styles from './calculator.module.scss'
+import cx from 'classnames'
+import { FiMoon, FiSun } from 'react-icons/fi'
 
 export default function Calculator() {
     
@@ -61,3 +64,5 @@ export default function Calculator() {
         
     </>
 }
+
+
