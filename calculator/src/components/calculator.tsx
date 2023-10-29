@@ -1,5 +1,6 @@
-import { useContext, useEffect, useState } from 'react'
+import { useContext, useState } from 'react'
 import React from 'react';
+import { useEffect } from 'react'
 
 export default function Calculator() {
     
