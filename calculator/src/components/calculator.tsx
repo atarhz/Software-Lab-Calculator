@@ -43,7 +43,33 @@ export default function Calculator() {
 
     //calculate
     const calculate = () => {
-        
+        setDecimal(false);
+        setDecimalCount(1)
+        if (operator === '/' && inputNum === 0) {
+            setCalculatednum(NaN);
+            setInputNum(0)
+            return
+        }
+        if (calculatednum === 0 && inputNum === 0) {
+            return;
+        }
+        switch (operator) {
+            case '+':
+                setCalculatednum(calculatednum + inputNum);
+                break;
+            case '/':
+                setCalculatednum(calculatednum / inputNum);
+                break;
+            case '*':
+                setCalculatednum(calculatednum * inputNum);
+                break;
+            case '-':
+                setCalculatednum(calculatednum - inputNum);
+                break;
+        }
+        if (operator === '') setCalculatednum(inputNum);
+        else setInputNum(0);
+        return;
     }
 
     //get equation
